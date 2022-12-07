@@ -1,0 +1,322 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-image: url(/img/IMG_20221204_134605_023.JPG);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+/* Icon social media : Mobile */
+
+@media screen and (max-width:425px) {
+    .socialMedia{
+        display: inline-block;
+        position: relative;
+        left: 2rem;
+        margin: 1rem;
+    }
+    .socialMedia i{
+        font-size: 24px;
+
+    }
+    
+}
+
+/* Icon social media : Desktop */
+
+@media screen and (min-width:426px){
+    .socialMedia {
+        display: inline-block;
+        position: relative;
+        left: 128px;
+        margin-top: 2px;
+        list-style: none;
+        padding: 16px;
+    }
+    .socialMedia i{
+        font-size: 24px;
+        color: black;
+    }
+    
+}
+
+/* common between mobile and desktop */
+
+.header-content{
+    margin: 12em auto;
+    width: 60%;
+}
+.header-content h1{
+    margin: 8px 0;
+    font-family: "Sofia", sans-serif;
+    font-size: 36px;
+    text-shadow: 1px 1px 2px rgb(207, 207, 207), 0 0 1em rgb(183, 183, 183), 0 0 0.2em rgb(187, 187, 187);
+
+}
+.header-content h4{
+    text-shadow: 1px 1px 2px rgb(207, 207, 207), 0 0 1em rgb(183, 183, 183), 0 0 0.2em rgb(187, 187, 187);
+    font-size: 32px;
+}
+
+    
+.header-content h6{
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgb(207, 207, 207), 0 0 1em rgb(183, 183, 183), 0 0 0.2em rgb(187, 187, 187);
+
+}
+
+/* navbar : Mobile */
+
+@media screen and (max-width: 426px) {
+    .navbar-burger{
+        float: right;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1;
+        margin: .5rem;
+        position: sticky;
+        top: 0;
+    }
+    .burger-inner{
+        background-color: #c2c7cb;
+        width: 30px;
+        height: 3px;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+    }
+    .burger-inner::after,
+    .burger-inner::before{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #c2c7cb;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+    }
+
+    .burger-inner::before{
+        transform: translateY(-10px);
+    }
+
+    .burger-inner::after{
+        transform: translateY(10px);
+    }
+    .navbar-burger.open .burger-inner{
+        transform: translateX(40px);
+        background-color: transparent;
+    }
+    .navbar-burger.open .burger-inner::after{
+        transform: translate(-40px, 0px) rotate(45deg);
+    }
+    .navbar-burger.open .burger-inner::before{
+        transform: translate(-40px, 0px) rotate(-45deg);
+    }
+
+    .navbar{
+        display: none;
+        clear: right;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    }
+    .nav-content{
+        list-style: none;
+        border-bottom: solid 1px #dee2e6;
+    }
+    .nav-content a:active{
+        color: #F85C70;
+    }
+    
+    
+}
+
+/* navbar : Desktop */
+
+@media screen and (min-width: 425px) {
+    .navbar{
+        position: sticky;
+        top: 0;
+        margin: auto;
+        width: 100%;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+    }
+    
+    .nav-content{
+        display: inline-block;
+        list-style: none;
+        margin: 8px 16px;
+        
+    }
+    .nav-content a{
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+    }
+    
+}
+
+
+/* About: common between mobile and desktop */
+
+#about{
+    margin: 32px;
+
+}
+
+.about-box p{
+    color: rgb(112, 111, 111);
+    font-size: small;
+    line-height: 2rem;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.title-about::first-letter{
+    text-decoration: underline #F85C70;
+}
+
+.title-about{
+    font-family: "Dosis", sans-serif;
+    padding: 16px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.head-box{
+    font-family: "Dosis", sans-serif;
+    padding: 1.25rem;
+    font-size: 1.25rem;
+}
+
+.about-box .detail{
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    line-height: 2rem;
+}
+
+/* About : Mobile */
+
+@media only screen and (425px > width) {
+    .about-box{
+        display: block;
+        border-bottom: solid 1px gray;
+        padding: 1rem;
+        margin: 2rem;
+    }
+    
+}
+
+/* About : Desktop */
+
+@media only screen and (min-width:425px) {
+    .about-box{
+        float: left;
+        margin: auto;
+        width: 48%;
+        border-left: solid 2px #F85C70;
+        padding: 2rem;
+        height: 20rem;
+        margin-bottom: 4rem;
+    }
+}
+
+
+/* Resume: common between mobile and desktop */
+
+.resume-box h5{
+    font-family: "Dosis", sans-serif;
+    font-size: 16px;
+    color: #6c757d;
+    
+}
+.resume-box h4{
+    font-family: "Dosis", sans-serif;
+    font-size: 12px;
+}
+.resume-box .education{
+    font-family: "Dosis", sans-serif;
+    font-size: 12px;
+    color: #6c757d;
+
+}
+.progress{
+    margin: 0 16px;
+    border-radius: 8px;
+}
+.progress-bar{
+    border-radius: 8px;
+}
+.title-resume{
+    font-family: "Dosis", sans-serif;
+    
+}
+
+/* Resume: mobile */
+
+@media screen and (max-width:425px) {
+    .head-resume{
+        font-family: "Dosis", sans-serif;
+        font-weight: 300;
+        margin: 3rem;
+    }
+    span.first-word{
+        color: #F85C70;
+    }
+    .resume-box{
+        margin: auto;
+        width: 80%;
+        border: solid 1px #dee2e6;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Resume : Desktop */
+
+@media screen and (min-width:426px) {
+    #resume{
+        clear: left;
+        margin: 2rem;
+    }
+    .head-resume{
+        font-family: "Dosis", sans-serif;
+        font-weight: 300;
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+    span.first-word{
+        color: #F85C70; 
+    }
+    
+    .resume-box{
+        float: left;
+        margin: auto;
+        width: 30%;
+        border: solid 1px #dee2e6;
+        margin: .5rem;
+        padding: 1rem;
+    }  
+}
+
+
+
+
+
+
